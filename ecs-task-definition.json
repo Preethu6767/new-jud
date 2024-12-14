@@ -1,0 +1,19 @@
+{
+  "family": "judge0-task",
+  "containerDefinitions": [
+    {
+      "name": "judge0-container",
+      "image": "289423065706.dkr.ecr.us-east-1.amazonaws.com/judge0:latest",
+      "memory": 512,
+      "cpu": 256,
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 2358,
+          "hostPort": 2358
+        }
+      ]
+    }
+  ]
+}
+
