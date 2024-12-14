@@ -1,5 +1,3 @@
-name: Build and Deploy to ECS
-
 on:
   push:
     branches:
@@ -17,6 +15,8 @@ jobs:
       # Log in to Amazon ECR
       - name: Login to Amazon ECR
         uses: aws-actions/amazon-ecr-login@v2
+        with:
+          region: us-east-1  # Specify the AWS region explicitly
 
       # Build and push the Docker image to ECR
       - name: Build and Push Docker Image
